@@ -29,13 +29,31 @@ namespace SistemaLoja.Forms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                prodNome.Text = prodCod.Text;
+                string[] row = { prodCod.Text, prodCod.Text, prodCod.Text, prodCod.Text };
+                var listview = new ListViewItem(row);
+                listProd.Items.Add(listview);
+                prodCod.Text = "";
             }
         }
 
         private void Vendas_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listProd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

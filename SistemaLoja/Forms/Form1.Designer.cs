@@ -49,6 +49,7 @@
             this.passBox.Name = "passBox";
             this.passBox.Size = new System.Drawing.Size(214, 20);
             this.passBox.TabIndex = 1;
+            this.passBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passBox_KeyDown);
             // 
             // label1
             // 

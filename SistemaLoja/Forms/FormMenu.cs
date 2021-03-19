@@ -68,5 +68,18 @@ namespace SistemaLoja.Forms
             vendas.Show();
             this.Hide();
         }
+
+        private void sairMenu_Click(object sender, EventArgs e)
+        {
+            //DialogResult diag = MessageBox.Show("Deseja sair do programa?", "Fechar",MessageBoxButtons.YesNo);
+            //if(diag == DialogResult.Yes)
+            //{
+            Application.Exit();
+            //}
+            //else
+            //{
+
+            //}
+        }
     }
 }

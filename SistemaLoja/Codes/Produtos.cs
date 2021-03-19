@@ -8,10 +8,10 @@ namespace SistemaLoja.Codes
 {
     class Produtos
     {
+        //Produto modelo
         public string Nome { get; set; }
         public int Codigo { get; set; }
         public float Valor { get; set; }
         public int Quantidade { get; set; }
-
     }
 }

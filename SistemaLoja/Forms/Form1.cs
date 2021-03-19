@@ -21,21 +21,30 @@ namespace SistemaLoja
             this.Location = new Point(400,200);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            if(usuario.ValidateUser(loginBox.Text, passBox.Text))
+            Login();
+        }
+
+        private void quitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void passBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Login feito com sucesso");
+                Login();
+            }
+        }
+
+        #region Login
+        public void Login()
+        {
+            if (usuario.ValidateUser(loginBox.Text, passBox.Text))
+            {
+                //MessageBox.Show("Login feito com sucesso");
                 FormMenu.lgn = true;
                 FormMenu.lgnOpen = false;
                 FormMenu.sistema = true;
@@ -46,10 +55,17 @@ namespace SistemaLoja
                 MessageBox.Show("Falha ao logar");
             }
         }
-
-        private void quitBtn_Click(object sender, EventArgs e)
+        #endregion
+        #region Codigo Quebrado
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
