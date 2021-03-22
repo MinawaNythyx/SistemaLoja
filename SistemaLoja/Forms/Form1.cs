@@ -1,4 +1,5 @@
-﻿using SistemaLoja.Forms;
+﻿using SistemaLoja.Codes;
+using SistemaLoja.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace SistemaLoja
 {
     public partial class Form1 : Form
     {
-        User usuario = new User();
+        DBLoginConnect log = new DBLoginConnect();
         public Form1()
         {
             InitializeComponent();
@@ -42,9 +43,9 @@ namespace SistemaLoja
         #region Login
         public void Login()
         {
-            if (usuario.ValidateUser(loginBox.Text, passBox.Text))
+            if (log.LoginCnn(loginBox.Text, passBox.Text))
             {
-                //MessageBox.Show("Login feito com sucesso");
+                FormMenu.UsuarioGeral = loginBox.Text;
                 FormMenu.lgn = true;
                 FormMenu.lgnOpen = false;
                 FormMenu.sistema = true;

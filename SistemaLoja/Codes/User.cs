@@ -10,24 +10,5 @@ namespace SistemaLoja
     {
         public string Usuario { get; set; }
         public string Password { get; set; }
-
-        public bool ValidateUser(string user, string pass)
-        {
-            if(user == "Victor")
-            {
-                if(pass == "senha")
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }

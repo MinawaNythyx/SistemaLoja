@@ -34,6 +34,7 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.vendaBtn = new System.Windows.Forms.Button();
             this.sairMenu = new System.Windows.Forms.Button();
+            this.NomeUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -55,7 +56,7 @@
             // vendaBtn
             // 
             this.vendaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vendaBtn.Location = new System.Drawing.Point(12, 12);
+            this.vendaBtn.Location = new System.Drawing.Point(12, 39);
             this.vendaBtn.Name = "vendaBtn";
             this.vendaBtn.Size = new System.Drawing.Size(150, 80);
             this.vendaBtn.TabIndex = 0;
@@ -74,12 +75,24 @@
             this.sairMenu.UseVisualStyleBackColor = true;
             this.sairMenu.Click += new System.EventHandler(this.sairMenu_Click);
             // 
+            // NomeUsuario
+            // 
+            this.NomeUsuario.AutoSize = true;
+            this.NomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeUsuario.Location = new System.Drawing.Point(13, 13);
+            this.NomeUsuario.Name = "NomeUsuario";
+            this.NomeUsuario.Size = new System.Drawing.Size(70, 26);
+            this.NomeUsuario.TabIndex = 2;
+            this.NomeUsuario.Text = "label1";
+            this.NomeUsuario.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.NomeUsuario);
             this.Controls.Add(this.sairMenu);
             this.Controls.Add(this.vendaBtn);
             this.Location = new System.Drawing.Point(300, 100);
@@ -88,6 +101,7 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +112,6 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Button vendaBtn;
         private System.Windows.Forms.Button sairMenu;
+        private System.Windows.Forms.Label NomeUsuario;
     }
 }

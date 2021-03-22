@@ -16,6 +16,7 @@ namespace SistemaLoja.Forms
         public static bool lgn;
         public static bool lgnOpen;
         public static bool sistema;
+        public static string UsuarioGeral;
         Form1 form1 = new Form1();
 
         public FormMenu()
@@ -24,6 +25,7 @@ namespace SistemaLoja.Forms
             lgn = false;
             lgnOpen = false;
             sistema = false;
+            UsuarioGeral = "";
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -48,7 +50,8 @@ namespace SistemaLoja.Forms
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if(sistema == true)
+            NomeUsuario.Text = "Seja Bem Vindo " + UsuarioGeral;
+            if (sistema == true)
             {
                 this.Show();
                 sistema = false;
@@ -80,6 +83,11 @@ namespace SistemaLoja.Forms
             //{
 
             //}
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
